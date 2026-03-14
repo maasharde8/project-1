@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+        .box{
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+        }
+     .box-1{
+            background-color: red;
+         scale:0;
+            height: 80px;
+            width: 80px;
+        }
+    
+    
+    </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="box"><div class="box-1"></div></div>
+    
+    <div class="a">
+    
+    <div class="b">a</div>
+        <div class="c">b</div>
+    
+    </div>
+
+
+<script>
+  const tl = gsap.timeline();
+
+  tl.to(".box", { x: 200, duration: 1 })
+    .to(".box-1", { scale:1, duration: 1 });
+    
+    
+    const t1=gsap.timeline();
+    
+    t1.to(".b",{x:200, duration:2})
+    .to(".c",{x:400, duration:2});
+</script>
+
+</body>
+</html>
